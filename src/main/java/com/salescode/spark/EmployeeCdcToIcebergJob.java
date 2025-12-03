@@ -68,7 +68,7 @@ public class EmployeeCdcToIcebergJob {
 
         Dataset<Row> kafkaStream = spark.readStream()
                 .format("kafka")
-                .option("kafka.bootstrap.servers", "kafka:9092")
+                .option("kafka.bootstrap.servers", "kafka:29092")
                 .option("subscribe", "mysql.quarkus_demo.Employee")
                 .option("startingOffsets", "earliest")
                 .load();
